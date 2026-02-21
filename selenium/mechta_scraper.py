@@ -31,8 +31,7 @@ def get_driver():
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option('useAutomationExtension', False)
 
-    # В ChromeDriverManager добавь chrome_type=ChromeType.CHROMIUM
-    # Это заставит его искать драйвер именно под Chromium, а не под Google Chrome
+ 
     service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 
     driver = webdriver.Chrome(service=service, options=options)
